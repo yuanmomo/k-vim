@@ -167,13 +167,13 @@ set matchtime=2
 
 " 设置文内智能搜索提示
 " 高亮search命中的文本
-set hlsearch
+"set hlsearch
 " 打开增量搜索模式,随着键入即时搜索
-set incsearch
+"set incsearch
 " 搜索时忽略大小写
-set ignorecase
+"set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
-set smartcase
+"set smartcase
 
 " 代码折叠
 set foldenable
@@ -229,7 +229,7 @@ set ttyfast
 set nrformats=
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-set relativenumber number
+"set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
