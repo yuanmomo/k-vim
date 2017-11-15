@@ -23,10 +23,11 @@
 "==========================================
 " Initial Plugin 加载插件
 "==========================================
-
-" 修改leader键
-let mapleader = ','
-let g:mapleader = ','
+" load local vimrc
+"
+if !empty(glob("~/local.vim"))
+    source ~/local.vim
+endif
 
 " 开启语法高亮
 syntax on
@@ -409,27 +410,27 @@ nnoremap <silent> <Leader>z :ZoomToggle<CR>
 
 
 " Go to home and end using capitalized directions
-noremap H ^
-noremap L $
+"noremap H ^
+"noremap L $
 
 
 " Map ; to : and save a million keystrokes 用于快速进入命令行
-nnoremap ; :
+"nnoremap ; :
 
 
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
+"cnoremap <C-j> <t_kd>
+"cnoremap <C-k> <t_ku>
+"cnoremap <C-a> <Home>
+"cnoremap <C-e> <End>
 
 
 " 搜索相关
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
+"map <space> /
 " 进入搜索Use sane regexes"
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
 
 " Keep search pattern at the center of the screen.
 nnoremap <silent> n nzz
@@ -512,7 +513,7 @@ vnoremap > >gv
 map Y y$
 
 " 复制选中区到系统剪切板中
-vnoremap <leader>y "+y
+"vnoremap <leader>y "+y
 
 " auto jump to end of select
 " vnoremap <silent> y y`]
@@ -520,10 +521,10 @@ vnoremap <leader>y "+y
 " nnoremap <silent> p p`]
 
 " select all
-map <Leader>sa ggVG
+"map <Leader>sa ggVG
 
 " 选中并高亮最后一次插入的内容
-nnoremap gv `[v`]
+"nnoremap gv `[v`]
 
 " select block
 nnoremap <leader>v V`}
@@ -532,7 +533,7 @@ nnoremap <leader>v V`}
 cmap w!! w !sudo tee >/dev/null %
 
 " kj 替换 Esc
-inoremap kj <Esc>
+"inoremap kj <Esc>
 
 " 滚动Speed up scrolling of the viewport slightly
 nnoremap <C-e> 2<C-e>
@@ -545,17 +546,17 @@ nnoremap <C-y> 2<C-y>
 "nmap T O<ESC>j
 
 " Quickly close the current window
-nnoremap <leader>q :q<CR>
+"nnoremap <leader>q :q<CR>
 
 " Quickly save the current file
-nnoremap <leader>w :w<CR>
+"nnoremap <leader>w :w<CR>
 
 " 交换 ' `, 使得可以快速使用'跳到marked位置
 nnoremap ' `
 nnoremap ` '
 
 " remap U to <C-r> for easier redo
-nnoremap U <C-r>
+"nnoremap U <C-r>
 
 " Quickly edit/reload the vimrc file
 " nmap <silent> <leader>ev :e $MYVIMRC<CR>
