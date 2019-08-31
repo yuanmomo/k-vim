@@ -42,7 +42,7 @@ endif
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-"Plug 'CodeFalling/fcitx-vim-osx'
+Plug 'ybian/smartim'
 
 " auto complete
 " 代码自动补全
