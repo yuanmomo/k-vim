@@ -93,9 +93,9 @@ set noswapfile
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 
 " 突出显示当前列
-set cursorcolumn
+"set cursorcolumn
 " 突出显示当前行
-set cursorline
+"set cursorline
 
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
@@ -653,14 +653,12 @@ if has("gui_running")
 endif
 
 
-
 " theme主题
 set background=dark
 set t_Co=256
 
 colorscheme solarized
 " colorscheme molokai
-
 
 " 设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
